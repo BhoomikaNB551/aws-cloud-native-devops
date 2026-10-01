@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: 242777378419.dkr.ecr.ap-south-1.amazonaws.com/devops-platform
+  tag: "latest"
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
