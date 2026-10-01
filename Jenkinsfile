@@ -69,7 +69,7 @@ pipeline {
                         --name ${EKS_CLUSTER} \
                         --region ${AWS_REGION}
 
-                    helm upgrade --install devops-platform ./helm \
+                    helm upgrade --install devops-platform ./helm/devops-platform \
                         --namespace default \
                         --set image.repository=${ECR_REGISTRY}/${ECR_REPOSITORY} \
                         --set image.tag=${IMAGE_TAG} \
